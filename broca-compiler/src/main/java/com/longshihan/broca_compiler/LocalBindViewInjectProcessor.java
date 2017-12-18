@@ -27,6 +27,8 @@ import javax.lang.model.util.Elements;
 import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 
+/**
+ */
 @AutoService(Processor.class)
 public class LocalBindViewInjectProcessor extends AbstractProcessor {
     private Messager messager;
@@ -74,8 +76,8 @@ public class LocalBindViewInjectProcessor extends AbstractProcessor {
 
             LocalBind bindAnnotation = variableElement.getAnnotation(LocalBind.class);
             messager.printMessage(Diagnostic.Kind.NOTE, ",4:"+bindAnnotation.toString());
-            String[] ids = bindAnnotation.value();
-            proxyInfo.injectVariables.put(ids, variableElement);
+            proxyInfo.setValus(bindAnnotation.value());
+            proxyInfo.injectVariables.put(fqClassName, variableElement);
         }
         for (String key : mProxyMap.keySet()) {
             LocalProxyInfo proxyInfo = mProxyMap.get(key);
@@ -104,7 +106,7 @@ public class LocalBindViewInjectProcessor extends AbstractProcessor {
 
     private boolean checkAnnotationValid(Element annotatedElement, Class clazz) {
         if (annotatedElement.getKind() != ElementKind.FIELD) {
-            error(annotatedElement, "%s must be declared on field.", clazz.getSimpleName());
+            messager.printMessage(Diagnostic.Kind.NOTE, "use ExecutableElement");
             return false;
         }
         if (ClassValidator.isPrivate(annotatedElement)) {

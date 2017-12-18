@@ -4,16 +4,16 @@ import android.app.Activity;
 import android.view.View;
 
 /**
- * Created by zhy on 16/4/22.
+ * 反射执行依赖注入的class
  */
 public class ViewInjector {
     private static final String SUFFIX = "$$ViewInject";
+
 
     public static void injectView(Activity activity) {
         ViewInject proxyActivity = findProxyActivity(activity);
         proxyActivity.inject(activity, activity);
     }
-
     public static void injectView(Object object, View view) {
         ViewInject proxyActivity = findProxyActivity(object);
         proxyActivity.inject(object, view);

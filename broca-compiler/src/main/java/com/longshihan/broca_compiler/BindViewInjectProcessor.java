@@ -27,6 +27,8 @@ import javax.lang.model.util.Elements;
 import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 
+/**
+ */
 @AutoService(Processor.class)
 public class BindViewInjectProcessor extends AbstractProcessor {
     private Messager messager;

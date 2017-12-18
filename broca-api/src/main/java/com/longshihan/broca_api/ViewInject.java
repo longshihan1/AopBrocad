@@ -1,9 +1,8 @@
 package com.longshihan.broca_api;
 
 /**
- * Created by zhy on 16/4/22.
+ * 反射的数据接口
  */
-public interface ViewInject<T>
-{
+public interface ViewInject<T> {
     void inject(T t, Object source);
 }

@@ -5,12 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.longshihan.aopbrocad.MainActivity">
-
-    <TextView
-        android:id="@+id/teeeeeeee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
-
+    tools:context="com.longshihan.aopbrocad.Main2Activity">
+<TextView
+    android:id="@+id/mian2text"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:text="tttttttttttttttt"/>
 </LinearLayout>

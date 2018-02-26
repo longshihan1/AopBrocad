@@ -16,13 +16,13 @@ import java.util.Map;
  * Created by LONGHE001.
  *
  * @time 2017/12/18 0018
- * @des
+ * @des 与生成广播的注解关联的
  * @function
  */
 
 public class BroadcastBindInjector {
     private static final String BROCASE_SUFFIX = "$BroadcastInject";
-    public static final String TAG="ViewInjector";
+    public static final String TAG="BroadcastInject";
     private static boolean debug = false;
 
     public static void setDebug(boolean debug) {

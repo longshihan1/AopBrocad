@@ -11,6 +11,7 @@ import javax.lang.model.util.Elements;
 
 /**
  * Created by longshihan on 2017/12/17.
+ * java生成文件
  */
 
 public class LocalProxyInfo {
@@ -30,7 +31,6 @@ public class LocalProxyInfo {
         //classname
         String className = ClassValidator.getClassName(classElement, packageName);
         this.packageName = packageName;
-        System.out.println("log:" + packageName + ":" + className);
         this.proxyClassName = className + PROXY;
     }
 
@@ -108,6 +108,7 @@ public class LocalProxyInfo {
     }
 
     public void setValus(String[] valus) {
+        //要不要去重
         this.valus = valus;
     }
 }

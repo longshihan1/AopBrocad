@@ -28,6 +28,7 @@ import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 
 /**
+ *
  */
 @AutoService(Processor.class)
 public class LocalBindViewInjectProcessor extends AbstractProcessor {
@@ -52,7 +53,6 @@ public class LocalBindViewInjectProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-        messager.printMessage(Diagnostic.Kind.NOTE, "start1 process...");
         mProxyMap.clear();
         Set<? extends Element> elesWithBind = roundEnv.getElementsAnnotatedWith(LocalBind.class);
         for (Element element : elesWithBind) {
@@ -62,20 +62,16 @@ public class LocalBindViewInjectProcessor extends AbstractProcessor {
             //class type
             TypeElement classElement = (TypeElement) variableElement.getEnclosingElement();
 
-            messager.printMessage(Diagnostic.Kind.NOTE, ",1:"+classElement.toString());
             //full class name
             String fqClassName = classElement.getQualifiedName().toString();
 
             LocalProxyInfo proxyInfo = mProxyMap.get(fqClassName);
             if (proxyInfo == null) {
                 proxyInfo = new LocalProxyInfo(elementUtils, classElement);
-                messager.printMessage(Diagnostic.Kind.NOTE, ",2:"+fqClassName);
-                messager.printMessage(Diagnostic.Kind.OTHER, ",3:"+elementUtils.toString()+":"+classElement.toString()+":"+variableElement.toString());
                 mProxyMap.put(fqClassName, proxyInfo);
             }
 
             LocalBind bindAnnotation = variableElement.getAnnotation(LocalBind.class);
-            messager.printMessage(Diagnostic.Kind.NOTE, ",4:"+bindAnnotation.toString());
             proxyInfo.setValus(bindAnnotation.value());
             proxyInfo.injectVariables.put(fqClassName, variableElement);
         }

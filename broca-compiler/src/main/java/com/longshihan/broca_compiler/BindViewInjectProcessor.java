@@ -52,7 +52,6 @@ public class BindViewInjectProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
-        messager.printMessage(Diagnostic.Kind.NOTE, "start process...");
         mProxyMap.clear();
         Set<? extends Element> elesWithBind = roundEnv.getElementsAnnotatedWith(Bind.class);
         for (Element element : elesWithBind) {
@@ -67,13 +66,10 @@ public class BindViewInjectProcessor extends AbstractProcessor {
             ProxyInfo proxyInfo = mProxyMap.get(fqClassName);
             if (proxyInfo == null) {
                 proxyInfo = new ProxyInfo(elementUtils, classElement);
-                messager.printMessage(Diagnostic.Kind.NOTE, "2:"+fqClassName);
-                messager.printMessage(Diagnostic.Kind.OTHER, "3:"+elementUtils.toString()+":"+classElement.toString()+":"+variableElement.toString());
                 mProxyMap.put(fqClassName, proxyInfo);
             }
 
             Bind bindAnnotation = variableElement.getAnnotation(Bind.class);
-            messager.printMessage(Diagnostic.Kind.NOTE, "4:"+bindAnnotation.toString());
             int id = bindAnnotation.value();
             proxyInfo.injectVariables.put(id, variableElement);
         }

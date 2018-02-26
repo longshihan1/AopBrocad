@@ -36,8 +36,17 @@ public class MainActivity extends Activity {
     }
 
     @LocalBind({"123", "345","4586"})
-    public void startvie(Intent intent) {
-        Log.d("LLL", intent.getAction());
+    public void getBroadcastService(Intent intent) {
+        Log.d("打印Action", intent.getAction());
+        switch (intent.getAction()){
+            case "123":
+                break;
+            case "345":
+                break;
+            case "4586":
+                break;
+
+        }
     }
 
     @Override

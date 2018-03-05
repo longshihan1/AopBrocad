@@ -16,7 +16,7 @@ import java.util.Map;
  * Created by LONGHE001.
  *
  * @time 2017/12/18 0018
- * @des 与生成广播的注解关联的
+ * @des
  * @function
  */
 

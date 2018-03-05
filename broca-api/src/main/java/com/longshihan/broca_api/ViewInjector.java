@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.view.View;
 
 /**
- * 反射执行依赖注入的class
+ *
  */
 public class ViewInjector {
     private static final String SUFFIX = "$$ViewInject";

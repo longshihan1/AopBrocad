@@ -14,10 +14,6 @@ import java.util.Map;
 
 /**
  * Created by LONGHE001.
- *
- * @time 2017/12/18 0018
- * @des
- * @function
  */
 
 public class BroadcastBindInjector {

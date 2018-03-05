@@ -40,3 +40,4 @@ publish {
     website = rootProject.website
     licences = rootProject.licences
 }
+apply from: '../javadoc.gradle'

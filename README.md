@@ -19,9 +19,7 @@
 		}
 	}
 
-    dependencies {
-	        compile 'com.github.longshihan1:AopBrocad:1.0.0'
-	}
+
 ```
 
 

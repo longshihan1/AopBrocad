@@ -6,12 +6,15 @@
 这是一款非常简单的实现本地广播等的依赖注入框架。
 
 ### 注意
-本地广播的方法要求public实现。
+本地广播的方法要求public实现,内部必须实现Intent。
 内部获取反射对象使用仿Butterknife实现。
+
+发送广播和之前一样实现。
 
 ### 使用介绍
 - gradle 
 ```java {.class1 .class} 
+
     allprojects {
 		repositories {
 			...
@@ -20,6 +23,10 @@
 	}
 
 
+    dependencies {
+         compile 'com.github.longshihan1.AopBrocad:broca-api:1.0.8'
+         annotationProcessor 'com.github.longshihan1:AopBrocad:broca-compiler:1.0.8'
+    }
 ```
 
 

@@ -1,5 +1,5 @@
 apply plugin: 'java-library'
-apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.novoda.bintray-release'
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])

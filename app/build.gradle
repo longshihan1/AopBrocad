@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 'android-O'
     defaultConfig {
         applicationId "com.longshihan.aopbrocad"
         minSdkVersion 19

@@ -1,6 +1,7 @@
 apply plugin: 'java-library'
 apply plugin: 'com.novoda.bintray-release'
-apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.longshihan1'
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api 'com.google.auto.service:auto-service:1.0-rc2'

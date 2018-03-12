@@ -5,7 +5,7 @@ group='com.github.longshihan1'
 android {
     compileSdkVersion 26
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"

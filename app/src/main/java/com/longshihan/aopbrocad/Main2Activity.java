@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.longshihan.broca_annotation.Bind;
+import com.longshihan.broca_api.ViewInjector;
 
 public class Main2Activity extends Activity {
 
@@ -19,6 +20,7 @@ public class Main2Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        ViewInjector.injectView(this);
         localBroadcastManager=LocalBroadcastManager.getInstance(this);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override

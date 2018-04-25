@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
     TextView maintext;
 
     private Unbinder unbinder;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

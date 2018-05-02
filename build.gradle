@@ -8,7 +8,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.1'
         classpath 'com.novoda:bintray-release:0.3.4'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -28,11 +27,11 @@ task clean(type: Delete) {
 
 //添加
 ext {
-    userOrg = 'longshihan'
+    userOrg = 'longhe'
     groupId = 'com.longshihan'
     uploadName = 'localbrocast'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'localbroadcast'
-    website = 'https://github.com/longshihan1/mutilayout'
+    website = 'https://github.com/longshihan1/AopBrocad'
     licences = ['Apache-2.0']
 }

@@ -24,8 +24,8 @@
 
 
     dependencies {
-         compile 'com.github.longshihan1.AopBrocad:broca-api:1.0.8'
-         annotationProcessor 'com.github.longshihan1:AopBrocad:broca-compiler:1.0.8'
+         compile 'com.github.longshihan1.AopBrocad:broca-api:1.1.2'
+         annotationProcessor 'com.github.longshihan1:AopBrocad:broca-compiler:1.1.2'
     }
 ```
 

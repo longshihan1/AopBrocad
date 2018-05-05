@@ -9,3 +9,5 @@
 .externalNativeBuild
 /.idea/sonarlint
 .idea/sonarlint/
+/.idea/codeStyles/
+/.idea/caches/

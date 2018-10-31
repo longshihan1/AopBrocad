@@ -29,5 +29,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':broca-api')
     annotationProcessor project(':broca-compiler')
+
 }
 apply from: '../javadoc.gradle'

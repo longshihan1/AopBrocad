@@ -14,19 +14,16 @@
 ### 使用介绍
 - gradle 
 ```java {.class1 .class} 
-
-    allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+		     repositories {
+			        ...
+			        maven { url 'https://jitpack.io' }
+		    }
 	}
-
-
-    dependencies {
-         compile 'com.github.longshihan1.AopBrocad:broca-api:1.1.2'
-         annotationProcessor 'com.github.longshihan1:AopBrocad:broca-compiler:1.1.2'
-    }
+dependencies {
+      compile 'com.github.longshihan1.AopBrocad:broca-api:1.2.3'
+      annotationProcessor 'com.github.longshihan1.AopBrocad:broca-compiler:1.2.3'
+}
 ```
 
 
@@ -58,7 +55,15 @@
 
 ```
 
-ID视图的依赖注入
+其中发送广播和之前一样
+```java {.class1 .class} 
+    LocalBroadcastManager localBroadcastManager;
+    localBroadcastManager=LocalBroadcastManager.getInstance(this);
+    Intent intent = new Intent("123");
+    localBroadcastManager.sendBroadcast(intent);
+```
+
+另外一个小功能：ID视图的依赖注入（就是仿ButterKnife）
 ```java {.class1 .class} 
 
  @Bind(R.id.maintext)

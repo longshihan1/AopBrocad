@@ -29,11 +29,7 @@ task clean(type: Delete) {
 
 //添加
 ext {
-    userOrg = 'longhe'
-    groupId = 'com.longshihan'
-    uploadName = 'localbrocast'
-    publishVersion = '1.0.1'
-    desc = 'localbroadcast'
-    website = 'https://github.com/longshihan1/AopBrocad'
-    licences = ['Apache-2.0']
+    compile_version = 27
+    target_version = 27
+    build_tool = '27.0.3'
 }
